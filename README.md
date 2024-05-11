@@ -1,6 +1,6 @@
 # Picarta-API
 
-[Picarta](https://picarta.ai)  AI Image Geolocalization API 🌍🔍
+[Picarta](https://picarta.ai) AI Image Geolocalization API 🌍🔍
 
 ### Overview
 
