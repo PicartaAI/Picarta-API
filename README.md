@@ -113,6 +113,6 @@ The API returns a JSON object containing classification results, including metad
 For any inquiries or assistance, feel free to contact us via:
 
 - Email: [contact@picarta.ai](mailto:info@picarta.ai)
-- Discord: [Join our Discord channel]([https://discord.gg/picarta](https://discord.gg/g5BAd2UFbs
+- Discord: [Join our Discord channel](https://discord.gg/g5BAd2UFbs)
 - Share your feedback!
 
