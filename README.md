@@ -63,3 +63,39 @@ else:
     print(response.json())
 
 ```
+#### Response Format
+The API returns a JSON object containing classification results, including metadata about the image and a dictionary of top predictions.
+
+#### Example API Response
+
+```python
+{
+  "ai_country": "Fiji",
+  "ai_lat": -10.932661290178117,
+  "ai_lon": 173.54167690802137,
+  "camera_maker": "NIKON CORPORATION",
+  "camera_model": "NIKON D200",
+  "city": "Ahau",
+  "confidence": 0.7205776784126713,
+  "province": "Rotuma",
+  "timestamp": "2010:09:21 12:04:46",
+  "topk_predictions_dict": {
+    "1": {
+      "address": {"city": "Ahau", "country": "Fiji", "province": "Rotuma"},
+      "confidence": 0.7205776784126713,
+      "gps": [-10.932661290178117, 173.54167690802137]
+    },
+    "2": {
+      "address": {"city": "Nghi Xuan", "country": "Vietnam", "province": "Ha Tinh"},
+      "confidence": 0.33465818962254223,
+      "gps": [18.831436938230198, 106.00851919090474]
+    },
+    "3": {
+      "address": {"city": "Hanga Roa", "country": "Chile", "province": "Valparaiso"},
+      "confidence": 0.23465818962254226,
+      "gps": [-42.42505486943787, -118.63631306266818]
+    }
+  }
+}
+```
+
