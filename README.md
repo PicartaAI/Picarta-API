@@ -108,7 +108,7 @@ The API returns a JSON object containing geographic location results, including 
     - `exif_lon`: Longitude from EXIF metadata.
     - `exif_country`: Country name from EXIF metadata.
 
-#### Contact Information
+### Contact Information
 
 For any inquiries or assistance, feel free to contact us via:
 
