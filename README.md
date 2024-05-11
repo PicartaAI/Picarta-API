@@ -102,7 +102,7 @@ The API returns a JSON object containing classification results, including metad
 #### Additional Notes
 
 - `topk_predictions_dict` is presented in the second version of the API.
-- `topk_predictions_dict[1]` is equal to province, ai_country, city, ai_lat, ai_lon, and ai_confidence. (It shows the top 1 result, which was the first version of the API).
+- `topk_predictions_dict[1]` is equal to province, ai_country, city, ai_lat, ai_lon, and ai_confidence. (It shows the top 1 result, which was in the first version of the API).
 - The API could also return the following values if the EXIF data exists in the images:
     - `exif_lat`: Latitude from EXIF metadata.
     - `exif_lon`: Longitude from EXIF metadata.
@@ -114,5 +114,5 @@ For any inquiries or assistance, feel free to contact us via:
 
 - Email: [contact@picarta.ai](mailto:info@picarta.ai)
 - Discord: [Join our Discord channel](https://discord.gg/g5BAd2UFbs)
-- Share your feedback!
+- Share your feedback: [API Feedback Survey]:(https://forms.gle/JokVe1ZRKP1hjsA49)
 
