@@ -87,12 +87,12 @@ The API returns a JSON object containing geographic location results, including 
     },
     "2": {
       "address": {"city": "Nghi Xuan", "country": "Vietnam", "province": "Ha Tinh"},
-      "confidence": 0.33465818962254223,
+      "confidence": 0.13465818962254223,
       "gps": [18.831436938230198, 106.00851919090474]
     },
     "3": {
       "address": {"city": "Hanga Roa", "country": "Chile", "province": "Valparaiso"},
-      "confidence": 0.23465818962254226,
+      "confidence": 0.03465818962254226,
       "gps": [-42.42505486943787, -118.63631306266818]
     }
   }
