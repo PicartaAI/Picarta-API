@@ -114,5 +114,5 @@ For any inquiries or assistance, feel free to contact us via:
 
 - Email: [contact@picarta.ai](mailto:info@picarta.ai)
 - Discord: [Join our Discord channel](https://discord.gg/g5BAd2UFbs)
-- Share your feedback: [API Feedback Survey]:(https://forms.gle/JokVe1ZRKP1hjsA49)
+- Share your feedback: [API Feedback Survey](https://forms.gle/JokVe1ZRKP1hjsA49)
 
