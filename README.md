@@ -64,7 +64,7 @@ else:
 
 ```
 #### Response Format
-The API returns a JSON object containing classification results, including metadata about the image and a dictionary of top predictions.
+The API returns a JSON object containing geographic location results, including metadata about the image and a dictionary of topk predictions.
 
 #### Example API Response
 
