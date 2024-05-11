@@ -4,11 +4,11 @@
 
 ### Overview
 
-The Picarta AI Image Geolocalization [API](https://picarta.ai/api)  allows users to classify images and obtain predictions about their geographic location based on their content and/or embedded metadata. Users can provide an image either from a local file or via a URL and receive predictions about the location depicted in the image. The API returns information such as city, province, country, GPS coordinates, and confidence scores for each prediction.
+The Picarta AI Image Geolocalization [API](https://picarta.ai/api) allows users to localize images and obtain predictions about their geographic location based on their content and/or embedded metadata. Users can provide an image either from a local file or via a URL and receive predictions about the location depicted in the image. The API returns information such as city, province, country, GPS coordinates, and confidence scores for each prediction.
 
 ### Authentication
 
-To access the API, users need to provide an API token in the request headers. Users can obtain an API token by registering on the Picarta AI website.
+To access the [API](https://picarta.ai/api), users need to provide an API token in the request headers. Users can obtain an API token by registering on the [Picarta](https://picarta.ai) website.
 
 ### Usage
 
