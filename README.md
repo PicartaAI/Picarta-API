@@ -60,7 +60,7 @@ if response.status_code == 200:
     print(result)
 else:
     print("Request failed with status code:", response.status_code)
-    print(response.json())
+    print(response.text)
 
 ```
 #### Response Format
