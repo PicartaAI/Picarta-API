@@ -18,7 +18,7 @@ The API accepts HTTP POST requests with a JSON payload containing the following 
 
 - `TOKEN`: User's API token.
 - `IMAGE`: Base64-encoded image data or URL of the image to classify.
-- `TOP_K` (Optional): Number of top predictions to return (default is 3, maximum is 10).
+- `TOP_K` (Optional): Number of top predictions to return (default is 10, maximum is 100).
 - `Center_LATITUDE` (Optional): Latitude of the center of the search area.
 - `Center_LONGITUDE` (Optional): Longitude of the center of the search area.
 - `RADIUS` (Optional): Radius of the search area around the center point in kilometers.
