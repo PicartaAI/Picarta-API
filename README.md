@@ -10,6 +10,14 @@ The Picarta Image Geolocalization [API](https://picarta.ai/api) allows users to 
 
 To access the [API](https://picarta.ai/api), users need to provide an API token in the request headers. Users can obtain an API token by registering on the [Picarta](https://picarta.ai) website.
 
+### Installation
+
+To install the `picarta` package, use pip:
+
+```bash
+pip install picarta
+```
+
 ### Usage
 
 #### Request Format
@@ -17,13 +25,35 @@ To access the [API](https://picarta.ai/api), users need to provide an API token 
 The API accepts HTTP POST requests with a JSON payload containing the following parameters:
 
 - `TOKEN`: User's API token.
-- `IMAGE`: Base64-encoded image data or URL of the image to classify.
+- `IMAGE`: image path or URL of the image to localize.
 - `TOP_K` (Optional): Number of top predictions to return (default is 10, maximum is 100).
 - `Center_LATITUDE` (Optional): Latitude of the center of the search area.
 - `Center_LONGITUDE` (Optional): Longitude of the center of the search area.
 - `RADIUS` (Optional): Radius of the search area around the center point in kilometers.
 
-#### Example Request
+#### Example Request using the `picarta` Package
+
+```python
+from picarta import Picarta
+
+api_token = "YOUR_API_TOKEN"
+localizer = Picarta(api_token)
+
+# Geolocate a local image
+result = localizer.localize(img_path="/path/to/local/image.jpg")
+print(result)
+
+# Geolocate an image from URL with optional parameters for a specific location search
+result = localizer.localize(img_path="https://upload.wikimedia.org/wikipedia/commons/8/83/San_Gimignano_03.jpg",
+                            top_k=10,
+                            center_latitude=43.464, 
+                            center_longitude=11.038,
+                            radius=100)
+print(result)
+
+```
+
+#### Example Request without `picarta` Package
 
 ```python
 import requests
