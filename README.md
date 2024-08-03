@@ -41,6 +41,7 @@ localizer = Picarta(api_token)
 
 # Geolocate a local image
 result = localizer.localize(img_path="/path/to/local/image.jpg")
+
 print(result)
 
 # Geolocate an image from URL with optional parameters for a specific location search
