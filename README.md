@@ -140,6 +140,7 @@ The API returns a JSON object containing geographic location results, including 
     - `exif_lat`: Latitude from EXIF metadata.
     - `exif_lon`: Longitude from EXIF metadata.
     - `exif_country`: Country name from EXIF metadata.
+- For aerial and satellite images, please refer to this repository: [Aerial-Imagery](https://github.com/PicartaAI/Picarta-Aerial-Imagery.git).
 
 ### Contact Information
 
