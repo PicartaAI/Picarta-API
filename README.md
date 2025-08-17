@@ -84,7 +84,7 @@ country_code, center_latitude, center_longitude, radius = None, None, None, None
 payload = {"TOKEN": api_token,
            "IMAGE": img_path,
            "TOP_K": top_k,
-            "COUNTRY_CODE": country_code,
+           "COUNTRY_CODE": country_code,
            "Center_LATITUDE": center_latitude,
            "Center_LONGITUDE": center_longitude,
            "RADIUS": radius}
