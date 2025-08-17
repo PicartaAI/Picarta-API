@@ -27,6 +27,7 @@ The API accepts HTTP POST requests with a JSON payload containing the following 
 - `TOKEN`: User's API token.
 - `IMAGE`: image path or URL of the image to localize.
 - `TOP_K` (Optional): Number of top predictions to return (default is 10, maximum is 100).
+- `COUNTRY_CODE` (Optional): 2-letter country code to limit search to a specific country (e.g., "US", "FR", "DE").
 - `Center_LATITUDE` (Optional): Latitude of the center of the search area.
 - `Center_LONGITUDE` (Optional): Longitude of the center of the search area.
 - `RADIUS` (Optional): Radius of the search area around the center point in kilometers.
@@ -48,6 +49,7 @@ print(result)
 result = localizer.localize(
 img_path="https://upload.wikimedia.org/wikipedia/commons/8/83/San_Gimignano_03.jpg",
 top_k=10,
+country_code="IT",
 center_latitude=43.464, 
 center_longitude=11.038,
 radius=100)
@@ -77,11 +79,12 @@ with open("path/to/local/image.jpg", "rb") as image_file:
 # img_path = "https://upload.wikimedia.org/wikipedia/commons/8/83/San_Gimignano_03.jpg"
 
 # Optional parameters for a specific location search
-center_latitude, center_longitude, radius = None, None, None 
+country_code, center_latitude, center_longitude, radius = None, None, None, None 
 
 payload = {"TOKEN": api_token,
            "IMAGE": img_path,
            "TOP_K": top_k,
+            "COUNTRY_CODE": country_code,
            "Center_LATITUDE": center_latitude,
            "Center_LONGITUDE": center_longitude,
            "RADIUS": radius}
