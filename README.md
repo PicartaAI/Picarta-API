@@ -193,6 +193,34 @@ The API returns a JSON object containing geographic location results, including 
 }
 ```
 
+#### No Match Found Response
+
+When using location filters (`COUNTRY_CODE`, `ADMIN1`, `Center_LATITUDE`/`Center_LONGITUDE`/`RADIUS`), the API may not find a matching location within the specified search area. In this case, the response will include a `message` field and an empty `topk_predictions_dict`. **No credits are deducted from your account for this search.**
+
+```json
+{
+  "camera_maker": "NIKON CORPORATION",
+  "camera_model": "NIKON D200",
+  "timestamp": "2010:09:21 12:04:46",
+  "topk_predictions_dict": {},
+  "message": "No matching location was found within the specified search area. No credits were deducted from your account."
+}
+```
+
+To handle this in your code, check for the `message` field or an empty `topk_predictions_dict`:
+
+```python
+result = localizer.localize(img_path="image.jpg", country_code="US", admin1="California")
+
+if "message" in result:
+    print(result["message"])
+    # Try enlarging the search radius or searching in a different area
+else:
+    print(result["topk_predictions_dict"])
+```
+
+**Tips:** If you receive this response, try enlarging the search radius or searching in a different region.
+
 #### Additional Notes
 
 - `topk_predictions_dict` is presented in the second version of the API.
