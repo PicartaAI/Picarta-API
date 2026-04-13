@@ -8,7 +8,7 @@ The Picarta Image Geolocalization [API](https://picarta.ai/api) allows users to 
 
 ### Authentication
 
-To access the [API](https://picarta.ai/api), users need to provide an API token in the request headers. Users can obtain an API token by registering on the [Picarta](https://picarta.ai) website.
+To access the [API](https://picarta.ai/api), users need to provide an API token in the request headers. Users can obtain an API token by registering on the [Picarta](https://picarta.ai) website. **New accounts receive 10 free API credits to test the service**, just generate your token from your account page to get started.
 
 ### Installation
 
