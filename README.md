@@ -26,7 +26,7 @@ The API accepts HTTP POST requests with a JSON payload containing the following 
 
 - `TOKEN`: User's API token.
 - `IMAGE`: image path or URL of the image to localize.
-- `TOP_K` (Optional): Number of top predictions to return (default is 3, maximum is 10).
+- `TOP_K` (Optional):  Maximum number of predictions to return (default is 3, up to 10).
 - `COUNTRY_CODE` (Optional): 2-letter country code to limit search to a specific country (e.g., "US", "FR", "DE").
 - `ADMIN1` (Optional): Admin1 region name (e.g., "California", "Niedersachsen", "Toscana"). Must be used with `COUNTRY_CODE`.
 - `Center_LATITUDE` (Optional): Latitude of the center of the search area.
