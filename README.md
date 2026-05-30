@@ -32,6 +32,7 @@ The API accepts HTTP POST requests with a JSON payload containing the following 
 - `Center_LATITUDE` (Optional): Latitude of the center of the search area.
 - `Center_LONGITUDE` (Optional): Longitude of the center of the search area.
 - `RADIUS` (Optional): Radius of the search area around the center point in kilometers (maximum 25km).
+- `CONTEXT` (Optional): Free-text hints about the photo to help guide the search. Maximum 500 characters.
 
 #### Search Priority
 
@@ -71,7 +72,8 @@ result = localizer.localize(
     admin1="Toscana",
     center_latitude=43.464, 
     center_longitude=11.038,
-    radius=25
+    radius=25,
+    context="Medieval hill town in Italy"
 )
 
 print(result)
@@ -135,7 +137,8 @@ with open("path/to/local/image.jpg", "rb") as image_file:
 # Optional parameters for a specific location search
 country_code = "IT"
 admin1 = "Toscana"
-center_latitude, center_longitude, radius = None, None, None 
+center_latitude, center_longitude, radius = None, None, None
+context = "Medieval hill town in Italy"
 
 payload = {"TOKEN": api_token,
            "IMAGE": img_path,
@@ -144,7 +147,8 @@ payload = {"TOKEN": api_token,
            "ADMIN1": admin1,
            "Center_LATITUDE": center_latitude,
            "Center_LONGITUDE": center_longitude,
-           "RADIUS": radius}
+           "RADIUS": radius,
+           "CONTEXT": context}
 
 response = requests.post(url, headers=headers, json=payload)
 
