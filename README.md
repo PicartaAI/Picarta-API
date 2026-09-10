@@ -8,7 +8,7 @@ The Picarta Image Geolocalization [API](https://picarta.ai/api) allows users to 
 
 ### Authentication
 
-The Picarta API is available to **Enterprise accounts only**. To get access, email [info@picarta.ai](mailto:info@picarta.ai) with your company name and use case. Approved accounts receive an API token to include in the request headers.
+The Picarta API is available to **Enterprise accounts only**. To request access, email [info@picarta.ai](mailto:info@picarta.ai) with your company name and use case. Once approved, log in and generate your API token from your account page, then include it in the request headers.
 
 ### Installation
 
