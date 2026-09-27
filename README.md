@@ -8,7 +8,7 @@ The Picarta Image Geolocalization [API](https://picarta.ai/api) allows users to 
 
 ### Authentication
 
-The Picarta API is available to **Enterprise accounts only**. To request access, email [info@picarta.ai](mailto:info@picarta.ai) with your company name and use case. Once approved, log in and generate your API token from your account page, then include it in the request headers.
+The Picarta API is available to **Enterprise accounts only**. To request access, email [info@picarta.ai](mailto:info@picarta.ai) with your company name and use case. Once approved, log in and generate your API token from your account page, then pass it when creating the client: `Picarta("YOUR_API_TOKEN")`.
 
 ### Installation
 
@@ -94,10 +94,10 @@ print(result)
 Or via GET request:
 
 ```
-GET https://picarta.ai/admin1/{country_code}
+GET https://api.picarta.ai/v1/admin1/{country_code}
 ```
 
-Example response for `GET /admin1/IT`:
+Example response for `GET /v1/admin1/IT`:
 ```json
 {
   "admin1_regions": ["Abruzzo", "Basilicata", "Calabria", "Campania", "Emilia-Romagna", "Friuli Venezia Giulia", "Lazio", "Liguria", "Lombardia", "Marche", "Molise", "Piemonte", "Puglia", "Sardegna", "Sicilia", "Toscana", "Trentino-Alto Adige", "Umbria", "Valle d'Aosta", "Veneto"],
@@ -112,52 +112,6 @@ If admin1 is not supported for a country:
   "country_code": "AD",
   "message": "Admin1 search not supported for this country. Use country-level search."
 }
-```
-
-#### Example Request without `picarta` Package
-
-```python
-import requests
-import json
-import base64
-
-url = "https://picarta.ai/classify"
-api_token = "API_TOKEN"
-top_k = 3
-headers = {"Content-Type": "application/json"}
-
-# Read the image from a local file or URL
-with open("path/to/local/image.jpg", "rb") as image_file:
-    img_path = base64.b64encode(image_file.read()).decode('utf-8')
-
-# OR  
-
-# img_path = "https://upload.wikimedia.org/wikipedia/commons/8/83/San_Gimignano_03.jpg"
-
-# Optional parameters for a specific location search
-country_code = "IT"
-admin1 = "Toscana"
-center_latitude, center_longitude, radius = None, None, None
-context = "Medieval hill town in Italy"
-
-payload = {"TOKEN": api_token,
-           "IMAGE": img_path,
-           "TOP_K": top_k,
-           "COUNTRY_CODE": country_code,
-           "ADMIN1": admin1,
-           "Center_LATITUDE": center_latitude,
-           "Center_LONGITUDE": center_longitude,
-           "RADIUS": radius,
-           "CONTEXT": context}
-
-response = requests.post(url, headers=headers, json=payload)
-
-if response.status_code == 200:
-    result = response.json()
-    print(result)
-else:
-    print("Request failed with status code:", response.status_code)
-    print(response.text)
 ```
 
 #### Response Format
