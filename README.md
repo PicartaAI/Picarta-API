@@ -187,6 +187,10 @@ else:
     - `exif_lat`: Latitude from EXIF metadata.
     - `exif_lon`: Longitude from EXIF metadata.
     - `exif_country`: Country name from EXIF metadata.
+    
+### API Reference
+
+For the full API reference, including all endpoints, parameters and responses, see [docs.picarta.ai](https://docs.picarta.ai).
 
 ### Contact Information
 
