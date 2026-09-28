@@ -190,7 +190,7 @@ else:
     
 ### API Reference
 
-For the full API reference, including all endpoints, parameters and responses, see [docs.picarta.ai](https://docs.picarta.ai).
+For the full API reference, including all endpoints, parameters and responses, see [docs.picarta.ai](https://docs.picarta.ai)
 
 ### Contact Information
 
