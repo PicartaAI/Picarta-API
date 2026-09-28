@@ -151,9 +151,9 @@ The API returns a JSON object containing geographic location results, including 
 }
 ```
 
-#### No Match Found Response
+#### No Location Found Response
 
-When using location filters (`COUNTRY_CODE`, `ADMIN1`, `Center_LATITUDE`/`Center_LONGITUDE`/`RADIUS`), the API may not find a matching location within the specified search area. In this case, the response will include a `message` field and an empty `topk_predictions_dict`. **No credits are deducted from your account for this search.**
+When using location filters (`COUNTRY_CODE`, `ADMIN1`, `Center_LATITUDE`/`Center_LONGITUDE`/`RADIUS`), the API may not find a location within the specified search area. In this case, the response will include a `message` field and an empty `topk_predictions_dict`. **No credits are deducted from your account for this search.**
 
 ```json
 {
@@ -161,7 +161,7 @@ When using location filters (`COUNTRY_CODE`, `ADMIN1`, `Center_LATITUDE`/`Center
   "camera_model": "NIKON D200",
   "timestamp": "2010:09:21 12:04:46",
   "topk_predictions_dict": {},
-  "message": "No matching location was found within the specified search area. No credits were deducted from your account."
+  "message": "No location was found within the specified search area. No credits were deducted from your account."
 }
 ```
 
